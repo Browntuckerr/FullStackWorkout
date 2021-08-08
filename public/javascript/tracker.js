@@ -12,31 +12,42 @@ function startFunction (event) {
         pullUpChart();
     } else if (result === "pushup") {
         console.log("pushup was selected")
-        // pushUpChart();
+        pushUpChart();
 
     } else if (result === "running") {
         console.log("running was selected")
-        // runningChart();
+        runningChart();
     }
 }
 
 pullUpChart = () => {
-    console.log("fetch is called")
-    fetch('/tracker/pullups', {
-        method: 'get',
-        // body: JSON.stringify({
-        //   user_id
-        // }),
-    //    where: {
-    //         user_id: req.session.user_id},
-        
-        // headers: { 'Content-Type': 'application/json' }
-      }).then((response) => {
+  console.log("fetch is called");
+  fetch("/tracker/pullups", {
+    method: "get",
+  }).then((response) => {
+    document.location.replace("/tracker/pullups");
+    console.log(response);
+  });
+};
 
-        document.location.replace("/tracker/pullups")
-        //   res.JSON(response)
-        console.log(response)
-        })
+pushUpChart = () => {
+    console.log("fetch is called");
+    fetch("/tracker/pushups", {
+      method: "get",
+    }).then((response) => {
+      document.location.replace("/tracker/pushups");
+      console.log(response);
+    });
+}
+
+runningChart = () => {
+    console.log("fetch is called");
+    fetch("/tracker/running", {
+      method: "get",
+    }).then((response) => {
+      document.location.replace("/tracker/running");
+      console.log(response);
+    });
 }
 
 

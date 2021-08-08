@@ -4,7 +4,7 @@
 <div class="container chart">
 
     <div class="rows" id="newChart">
-    
+
     </div>
 
     <div class="row">
@@ -13,19 +13,18 @@
                 <div class="card-body">
                     <h5 class="card-title">Workout Tracker</h5>
                     <p class="card-text">Choose one of the following workouts:</p>
-                        <form>
+                        <form id="tracker-form">
                         <select name="workouts" id="workouts">
                             <option value="" >Choose one</option>
                             <option value="pullup" id="pullup">PullUps</option>
                             <option value="pushup" id="pushup">PushUps</option>
                             <option value="running" id="running">Running</option>
                         </select>
-                        <button class="submit" type="button" id="trackBtn" onclick="GetSelectedText()"><i class='bx bx-trending-up'></i>Track Progress!</button>
+                        <button class="submit" type="submit" id="trackBtn"><i class='bx bx-trending-up'></i>Track Progress!</button>
                         </form>
                 </div>
             </div>
     </div>
-
     </div>
     </div>
 
@@ -74,3 +73,5 @@
     </div>
 
     </div>
+
+       <script src="/javascript/tracker.js"></script>
